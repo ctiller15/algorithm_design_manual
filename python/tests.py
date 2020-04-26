@@ -1,5 +1,6 @@
 import unittest
 from sorting.selection_sort import selection_sort
+from sorting.insertion_sort import insertion_sort
 
 class TestSortAlgorithms(unittest.TestCase):
     def setUp(self):
@@ -13,6 +14,11 @@ class TestSortAlgorithms(unittest.TestCase):
         for test, assertion in self.test_cases:
             with self.subTest():
                 self.assertEqual(selection_sort(test), assertion)
+
+    def test_insertion_sort(self):
+        for test, assertion in self.test_cases:
+            with self.subTest():
+                self.assertEqual(insertion_sort(test), assertion)
 
 if __name__ == '__main__':
     unittest.main()
